@@ -1,0 +1,60 @@
+/*================== 10, Footer ================== */
+.footer {
+  padding: 72px 36px;
+  position: relative;
+  background-color: #1b1d1f;
+  @include breakpoint(576) {
+    display: none;
+  }
+  &__title {
+    font-size: 14.07px;
+    line-height: 1.2;
+    letter-spacing: 0.05em;
+    margin-bottom: 27px;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 600;
+  }
+  &__text-np {
+    font-size: 14.07px;
+    color: #fff;
+    font-weight: 400;
+    line-height: 1.75;
+    @include breakpoint(768) {
+      font-size: 13px;
+    }
+  }
+  &__text {
+    font-size: 12px;
+    color: #fff;
+    font-weight: 400;
+    line-height: 1.75;
+    &:hover {
+      color: #e9168c;
+    }
+    @include breakpoint(768) {
+      font-size: 13px;
+    }
+  }
+  .footer__time {
+    color: #fff;
+    font-size: 11px;
+  }
+  &__tags {
+    .tags-item {
+      font-size: 11px;
+      color: #fff;
+      padding: 2px 5px 2px 5px;
+      display: inline-block;
+      border: 1px solid;
+      border-radius: 4px;
+      border-color: rgba(255, 255, 255, 0.25);
+      margin: 0 5px 9px 0;
+      text-transform: uppercase;
+      font-weight: 500;
+      &:hover {
+        color: #e9168c;
+      }
+    }
+  }
+}

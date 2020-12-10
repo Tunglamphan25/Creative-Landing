@@ -1,0 +1,45 @@
+/*================== 8, Achievements ================== */
+.achievements {
+  padding: 72px 36px;
+  position: relative;
+  z-index: 3;
+  background-color: white;
+  &-box {
+    margin-bottom: 50px;
+    padding: 0;
+    text-align: center;
+    padding-right: 72px;
+    @include breakpoint(576) {
+      padding-right: 0px;
+    }
+    .achievements-time {
+      color: #303133;
+      margin: 9px 0 0 0;
+      font-size: 12px;
+      line-height: 1.75;
+      font-weight: 600;
+      text-align: left;
+    }
+    .achievements-heading {
+      color: #303133;
+      font-weight: 700;
+      margin: 9px 0 0 0;
+      word-break: break-word;
+      font-size: 29px;
+      letter-spacing: -0.05em;
+      line-height: 1.2;
+      text-align: left;
+      &:hover {
+        color: #e9168c;
+      }
+    }
+    .achievements-text {
+      color: #777;
+      margin-top: 0;
+      font-size: 15px;
+      line-height: 1.75;
+      margin: 18px 0 0;
+      text-align: left;
+    }
+  }
+}

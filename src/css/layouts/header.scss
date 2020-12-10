@@ -1,0 +1,297 @@
+/*============ 2, Header =============*/
+.collapse {
+  animation: collapse 0.5s ease forwards;
+}
+
+// Open nav bar on scroll up
+.open {
+  animation: open 0.5s ease forwards;
+}
+
+@keyframes collapse {
+  from {
+    opacity: 1;
+    top: 0;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes open {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    top: 0;
+  }
+}
+
+.header {
+  position: fixed;
+  left: 0;
+  z-index: 99;
+  padding: 36px 36px;
+  &.color {
+    background: #fff;
+    &.color .header__top-logo {
+      color: #000;
+    }
+    &.color .header-button .bar1 {
+      background: #000;
+      width: 20px;
+    }
+    &.color .header-button .bar2 {
+      background: #000;
+      width: 20px;
+    }
+    &.color .header-button .bar3 {
+      background: #000;
+      width: 20px;
+    }
+  }
+  @include breakpoint(768) {
+    padding: 10px 27px;
+  }
+  @include breakpoint(576) {
+    padding: 10px 20px;
+  }
+  &.record {
+    background: #fff;
+    @include breakpoint(768) {
+      padding: 20px 36px;
+    }
+    &.record .header__top-logo {
+      color: #000;
+    }
+    &.record .items-link {
+      color: #000;
+    }
+    &.record .header-button .bar1 {
+      background: #000;
+      width: 20px;
+    }
+    &.record .header-button .bar2 {
+      background: #000;
+      width: 20px;
+    }
+    &.record .header-button .bar3 {
+      background: #000;
+      width: 20px;
+    }
+    &.record .icon__item {
+      color: #000;
+    }
+  }
+  &__top {
+    justify-content: space-between;
+    @include min-breakpoint(992) {
+      position: relative;
+    }
+    &-logo {
+      font-size: 19px;
+      font-weight: 400;
+      letter-spacing: 1px;
+      color: #fff;
+      &:hover {
+        color: #fff;
+      }
+    }
+    &-list {
+      margin-bottom: 0;
+      display: flex;
+      @include breakpoint(768) {
+        display: none;
+      }
+      .list-items {
+        margin-left: 30px;
+        &:hover .menu {
+          display: block;
+        }
+        &:hover .menu-extra {
+          display: block;
+        }
+        &:hover .menu-shop {
+          display: block;
+        }
+        .extra {
+          position: relative;
+        }
+        .items-link {
+          color: #fff;
+          font-size: 12px;
+          font-family: Poppins, sans-serif;
+          font-weight: 1000;
+          text-transform: uppercase;
+        }
+        .menu {
+          display: none;
+          position: absolute;
+          width: 100%;
+          left: 0;
+          padding-top: 20px;
+          text-align: left;
+          .menu-drop {
+            display: flex;
+            background: #1d1b1f;
+            width: 100%;
+            white-space: nowrap;
+            padding: 27px 0;
+            .menu-list {
+              padding: 0 27px;
+              width: 25%;
+              .list-text {
+                padding: 9px 9px 20px 9px;
+                color: #fff;
+                text-transform: uppercase;
+                font-size: 12px;
+                font-family: Poppins, sans-serif;
+                font-weight: 400;
+              }
+              .menu-box {
+                padding-top: 15px;
+                .box-items-text {
+                  padding: 5px 9px 5px 9px;
+                  color: #fff;
+                  font-size: 12px;
+                  font-family: Poppins, sans-serif;
+                  line-height: normal;
+                  letter-spacing: 0px;
+                  display: block;
+                  white-space: nowrap;
+                  &:hover {
+                    background: #1d1b1f;
+                  }
+                }
+              }
+            }
+            .border-left {
+              border-left: 1px solid rgba(255, 255, 255, 0.5);
+            }
+          }
+        }
+        .menu-extra {
+          display: none;
+          position: absolute;
+          width: 25%;
+          padding-top: 32px;
+          text-align: left;
+          .menu-drop {
+            display: flex;
+            background: #1d1b1f;
+            width: 100%;
+            white-space: nowrap;
+            padding: 27px 0;
+            .menu-list {
+              padding: 0 27px;
+              width: 100%;
+              .list-text {
+                padding: 9px 9px 20px 9px;
+                color: #fff;
+                text-transform: uppercase;
+                font-size: 12px;
+                font-family: Poppins, sans-serif;
+                font-weight: 400;
+              }
+              .menu-box {
+                padding-top: 15px;
+                .box-items-text {
+                  padding: 5px 9px 5px 9px;
+                  color: #fff;
+                  font-size: 12px;
+                  font-family: Poppins, sans-serif;
+                  line-height: normal;
+                  letter-spacing: 0px;
+                  display: block;
+                  white-space: nowrap;
+                  &:hover {
+                    background: #1d1b1f;
+                  }
+                }
+              }
+              .border-left {
+                border-left: 1px solid rgba(255, 255, 255, 0.5);
+              }
+            }
+          }
+        }
+      }
+    }
+    .header-button {
+      padding: 0.75rem;
+      font-size: 1.5rem;
+      text-transform: uppercase;
+      line-height: 1;
+      display: none;
+      @include breakpoint(768) {
+        display: block;
+      }
+    }
+    .header-icon {
+      @include breakpoint(768) {
+        display: none;
+      }
+      & > a:hover {
+        color: #ffffff80;
+      }
+      .icon__item {
+        color: #fff;
+        padding: 0 9px;
+        font-size: 12px;
+      }
+    }
+    &-list-mobile {
+      opacity: 0;
+      visibility: hidden;
+      transition: 0.5s;
+      position: absolute;
+      width: 100%;
+      top: 100%;
+      left: 0;
+      overflow: hidden;
+      max-height: 0;
+      text-align: center;
+      .mobile__item-link {
+        font-size: 34.56px;
+        font-weight: 600;
+        font-family: Poppins;
+        color: #fff;
+        & > i {
+          font-size: 25px;
+          margin-right: 20px;
+          margin-left: 20px;
+          margin-bottom: 20px;
+        }
+        &:focus {
+          color: rgba(255, 255, 255, 0.5);
+        }
+      }
+      &.show {
+        max-height: 100vh;
+        background: #1b1d1f;
+        padding-top: 30px;
+      }
+      @include breakpoint(768) {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+    .mobile__item-subMenu {
+      overflow: hidden;
+      max-height: 0;
+      transition: 0.5s;
+      text-align: center;
+      overflow: hidden;
+      .subMenu__item-link {
+        font-size: 34.56px;
+        font-weight: 600;
+        font-family: Poppins;
+        color: #fff;
+      }
+      &.showSub {
+        max-height: 100vh;
+      }
+    }
+  }
+}

@@ -1,0 +1,203 @@
+/*================ 3, Banner ================*/
+.banner {
+  background-image: linear-gradient(
+      to left,
+      rgba(100, 66, 255, 0.7) 0%,
+      rgba(144, 18, 254, 0.7) 100%
+    ),
+    url(../images/rawpixel-com-594859-unsplash-min-uai-1440x959.jpg);
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: cover;
+  background-attachment: scroll;
+  position: relative;
+  padding-top: 140px;
+  padding-left: 36px;
+  padding-right: 36px;
+  transition: opacity 0.5s;
+  transition-delay: 0.2s;
+  @include breakpoint(768) {
+    padding-bottom: 72px;
+    padding-top: 72px;
+  }
+  @include breakpoint(425) {
+    padding-bottom: 0;
+  }
+  @include breakpoint(375) {
+    padding-top: 72px;
+  }
+  @include breakpoint(320) {
+    padding-bottom: 0;
+  }
+  &__left {
+    padding: 0;
+    &-title {
+      display: block;
+      font-weight: 700;
+      letter-spacing: -0.05em;
+      font-size: 77px;
+      line-height: 1.2;
+      margin: 27px 0 0;
+      text-align: left;
+      font-family: Poppins;
+      margin-bottom: 20px;
+      @include breakpoint(768) {
+        font-size: 50px;
+      }
+      @include breakpoint(425) {
+        font-size: 35px;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      @include breakpoint(320) {
+        font-size: 28px;
+        text-align: center;
+      }
+    }
+    &-text {
+      display: block;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 1.75;
+      letter-spacing: 0em;
+      text-align: left;
+      margin-top: 0;
+      margin-bottom: 36px;
+      @include breakpoint(425) {
+        text-align: center;
+      }
+      @include breakpoint(320) {
+        font-weight: 400;
+        text-align: center;
+      }
+    }
+  }
+  &__button {
+    padding-left: 0;
+    padding-right: 9px;
+    display: inline-block;
+    vertical-align: bottom;
+    margin-top: 0px;
+    position: relative;
+    @include breakpoint(768) {
+      padding-left: 0;
+      padding-right: 0;
+    }
+    @include breakpoint(576) {
+      padding-left: 9px;
+      margin: 0;
+    }
+    @include breakpoint(425) {
+      text-align: center;
+    }
+    &-left {
+      min-width: 140px;
+      font-weight: 700;
+      text-transform: initial;
+      border-width: 1px;
+      letter-spacing: -0.02em;
+      background-color: #e9168c;
+      border-color: #e9168c;
+      font-size: 15px;
+      padding: 14px 40px;
+      display: inline-block;
+      text-align: center;
+      margin-top: 1px;
+      margin-bottom: 1px;
+      cursor: pointer;
+      border-style: solid;
+      border-radius: 2px;
+      outline: none;
+      white-space: pre-wrap;
+      vertical-align: middle;
+      margin-right: 9px;
+      &:hover {
+        background-color: #dc097f;
+        border-color: #dc097f;
+      }
+      @include breakpoint(425) {
+        margin-right: 20px;
+        margin-bottom: 20px;
+        font-size: 11px;
+      }
+    }
+    &-right {
+      min-width: 140px;
+      font-weight: 700;
+      text-transform: initial;
+      border-width: 1px;
+      letter-spacing: -0.02em;
+      color: #303133;
+      background-color: #fff;
+      border-color: #fff;
+      font-size: 15px;
+      padding: 14px 40px;
+      display: inline-block;
+      text-align: center;
+      margin-top: 1px;
+      margin-bottom: 1px;
+      cursor: pointer;
+      border-style: solid;
+      border-radius: 2px;
+      outline: none;
+      white-space: pre-wrap;
+      vertical-align: middle;
+      margin-left: 9px;
+      &:hover {
+        color: #ffffff;
+        background-color: transparent;
+        border-color: #ffffff;
+      }
+      @include breakpoint(425) {
+        margin-bottom: 20px;
+        margin-right: 20px;
+        margin-left: 0;
+        font-size: 11px;
+      }
+    }
+  }
+  &__right {
+    padding-left: 36px;
+    align-items: flex-end;
+    margin-top: 30px;
+    .img-first {
+      display: block;
+      @include breakpoint(575) {
+        display: none;
+      }
+    }
+    .img-last {
+      display: none;
+      @include breakpoint(575) {
+        display: block;
+        width: 100%;
+      }
+    }
+  }
+  &__wave {
+    left: 0;
+    position: absolute;
+    bottom: 0;
+    z-index: 3;
+    & > svg {
+      position: absolute;
+      width: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      height: 289px;
+      bottom: 0;
+      @include breakpoint(768) {
+        height: 200px;
+      }
+      @include breakpoint(576) {
+        height: 180px;
+      }
+      @include breakpoint(375) {
+        height: 120px;
+      }
+      @include breakpoint(320) {
+        height: 100px;
+      }
+    }
+  }
+}

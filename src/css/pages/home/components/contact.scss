@@ -1,0 +1,163 @@
+/*================== 7, Contact ================== */
+.contact {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  table-layout: fixed;
+  background-image: linear-gradient(
+      to left,
+      rgba(100, 66, 255, 0.7) 0%,
+      rgba(144, 18, 254, 0.7) 100%
+    ),
+    url(https://d3f86pfw66amx.cloudfront.net/uncode/wp-content/uploads/2015/10/rawpixel-com-594859-unsplash-min.jpg);
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: cover;
+  &__wave {
+    width: 100%;
+    left: 0;
+    transform: scaleY(-1);
+    height: 260px;
+    @include breakpoint(768) {
+      height: 190px;
+    }
+    @include breakpoint(320) {
+      height: 125px;
+    }
+    & > svg {
+      position: absolute;
+      width: 100%;
+      left: 50%;
+      height: 260px;
+      transform: translateX(-50%);
+      bottom: 0;
+      @include breakpoint(768) {
+        height: 200px;
+      }
+      @include breakpoint(375) {
+        height: 120px;
+      }
+      @include breakpoint(320) {
+        height: 100px;
+      }
+    }
+    &-last {
+      height: 260px;
+      width: 100%;
+      left: 0;
+      transform: scaleX(-1) translateZ(0);
+      bottom: 0;
+      @include breakpoint(768) {
+        height: 200px;
+      }
+      @include breakpoint(320) {
+        height: 125px;
+      }
+      & > svg {
+        position: absolute;
+        height: 260px;
+        width: 100%;
+        left: 50%;
+        bottom: 0;
+        transform: translateX(-50%);
+        @include breakpoint(768) {
+          height: 200px;
+        }
+        @include breakpoint(375) {
+          height: 120px;
+        }
+        @include breakpoint(320) {
+          height: 100px;
+        }
+      }
+    }
+  }
+  &-row {
+    padding: 0 36px;
+  }
+  .mt {
+    margin-top: 48px;
+    display: block;
+    @include min-breakpoint(400) {
+      display: flex;
+    }
+  }
+  .mx-auto {
+    margin-right: auto;
+    margin-left: auto;
+  }
+  &__title {
+    &-heading {
+      font-size: 12px;
+      line-height: 1.2;
+      letter-spacing: 0.2em;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+    &-text {
+      font-size: 30px;
+      line-height: 1.2;
+      margin-top: 18px;
+      font-weight: 700;
+      @include min-breakpoint(400) {
+        font-size: 35px;
+      }
+    }
+  }
+  &__form {
+    margin-top: 16px;
+    input.form-contact {
+      width: 100%;
+      border: 1px solid transparent;
+      &:focus {
+        outline: none;
+        border: 1px solid #e9168c;
+      }
+      &::placeholder {
+        color: #a9a9a9;
+        font-family: Poppins;
+      }
+    }
+  }
+  &__button {
+    margin: 48px 0 0 0;
+    & > span {
+      display: block;
+      text-align: center;
+      padding: 0;
+      margin: 15px 0;
+      @include min-breakpoint(576) {
+        display: inline-block;
+        padding-left: 9px;
+        padding-right: 9px;
+        margin: 0;
+      }
+      .button-info {
+        font-size: 18px;
+        display: inline-block;
+        border-radius: 2px;
+        border-style: solid;
+        outline: none;
+        cursor: pointer;
+        font-weight: 700;
+        background-color: #e9168c;
+        border-color: #e9168c;
+        text-transform: uppercase;
+        padding: 14px 40px;
+        &:hover {
+          background-color: #dc097f;
+          border-color: #dc097f;
+        }
+        @include breakpoint(576) {
+          padding: 13px 30px;
+          font-size: 13px;
+        }
+        @include breakpoint(320) {
+          padding: 10px 20px;
+          font-size: 13px;
+        }
+      }
+    }
+  }
+}
